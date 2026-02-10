@@ -70,7 +70,7 @@ np.random.seed(SEED)
 df = pd.read_csv(CSV_DESCR)
 
 if "Etot" not in df.columns or "id" not in df.columns:
-    raise ValueError("CSV precisa ter colunas 'id' e 'Etot'")
+    raise ValueError("CSV need same lines 'id' e 'Etot'")
 
 y = df["Etot"]
 X = df.drop(columns=["Etot"])
@@ -136,7 +136,7 @@ df = df.sort_values("Etot_pred").reset_index(drop=True)
 df["rank"] = np.arange(1, len(df) + 1)
 
 df.to_csv("ranking_xgboost.csv", index=False)
-print("✔ Ranking salvo em ranking_xgboost.csv")
+print("✔ Ranking save at ranking_xgboost.csv")
 
 # ==========================================================
 # 6. SELECIONA TOP-K TEMPLATES
@@ -201,12 +201,12 @@ for tid in top_templates:
         new_id += 1
         generated += 1
 
-print(f"✔ {new_id-1} novas estruturas geradas")
+print(f"✔ {new_id-1} new structures generated")
 
 # ==========================================================
 # 9. SALVA LOG
 # ==========================================================
-pd.DataFrame(log).to_csv("novas_estruturas_log.csv", index=False)
+pd.DataFrame(log).to_csv("new_structures_log.csv", index=False)
 
-print("✔ Log salvo em novas_estruturas_log.csv")
-print("🚀 PIPELINE FINALIZADO")
+print("✔ Log save at new_structures_log.csv")
+print("🚀 RUN OK")
