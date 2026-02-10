@@ -1,26 +1,26 @@
-
----
-
-## README.md (analysis)
-
-```markdown
 # Layer-resolved physical analysis
 
-This module performs **layer-by-layer physical analysis** of nanoparticles.
-param_inter.txt contain the parameters used in the simulation.
+This module performs **layer-by-layer physical and chemical analysis** of
+nanoparticles using a topology-driven definition of atomic layers.
+
+## Configuration
+- **`param_inter.txt`**: parameter file controlling graph construction,
+  layer definition, and analysis options
 
 ## Outputs
-For each nanoparticle:
-- layers.csv
-- coordination vs layer
-- electronegativity vs layer
-- VEC vs layer
-- composition vs layer
 
-Global averages:
-- mean ± std for all properties per layer
+### Per-nanoparticle results
+For each individual nanoparticle:
+- **`layers.csv`**: layer-resolved numerical data
+- **Coordination vs layer** plots
+- **Electronegativity vs layer** plots
+- **Valence electron concentration (VEC) vs layer** plots
+- **Composition vs layer** plots
+
+### Global statistics
+Across the full dataset:
+- **Mean ± standard deviation** of all layer-resolved properties
 
 ## Run
 ```bash
 python inter.py
-
