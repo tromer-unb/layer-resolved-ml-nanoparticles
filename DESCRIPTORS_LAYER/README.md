@@ -1,28 +1,23 @@
-
----
-
-## README.md (descriptor)
-
-```markdown
 # Layer-resolved descriptor
 
-This module constructs a **topology-driven, multilayer descriptor** for nanoparticles.
+This module constructs a **topology-driven, multilayer descriptor** for
+chemically complex nanoparticles.
 
 ## Main script
-- `descriptors_layer.py`
+- **`descriptors_layer.py`**: core implementation of the layer-resolved descriptor
 
 ## Input
-- Atomic structures in `structures/`
-- Parameters defined in `param.txt`
+- **Atomic structures** located in `structures/`
+- **Descriptor parameters** defined in `param.txt`
 
 ## Output
-- `descriptors.csv`
+- **`descriptors.csv`**: numerical descriptor matrix (one row per nanoparticle)
 
 ## Key concepts
-- Neighbor graph built using ASE natural cutoffs
-- Surface atoms identified by coordination deficit
-- Topological distance computed via BFS
-- Layer-dependent weighting without increasing feature dimensionality
+- **Chemical neighbor graph** constructed using ASE natural cutoffs
+- **Surface atoms** identified via coordination-number deficit
+- **Topological distance** from the surface computed using breadth-first search (BFS)
+- **Layer-dependent weighting** applied without increasing feature dimensionality
 
 ## Run
 ```bash
