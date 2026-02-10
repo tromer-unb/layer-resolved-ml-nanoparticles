@@ -7,6 +7,7 @@
 # Layer-resolved physical analysis
 
 This module performs **layer-by-layer physical analysis** of nanoparticles.
+param_inter.txt contain the parameters used in the simulation.
 
 ## Outputs
 For each nanoparticle:
