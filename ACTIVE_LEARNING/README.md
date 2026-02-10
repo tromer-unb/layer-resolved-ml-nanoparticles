@@ -18,7 +18,7 @@ concatenating the descriptor matrix with the corresponding target values
 ## Output
 - `ranking_xgboost.csv`: predicted energies and stability ranking
 - `structures_new/`: newly generated nanoparticle candidates (active learning)
-- `novas_estruturas_log.csv`: log linking new structures to their parent templates
+- `new_structures_log.csv`: log linking new structures to their parent templates
 
 ## Run
 ```bash
